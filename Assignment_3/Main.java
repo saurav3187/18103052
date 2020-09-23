@@ -25,7 +25,7 @@ import org.jsoup.select.Elements;
 
 public class Main
 {
-	static ArrayList<String> list = new ArrayList<String>();
+    static ArrayList<String> list = new ArrayList<String>();
     static HashSet<String> set = new HashSet();
 
     public static void focusedCrawlerUtil(String url, int depth, XSSFWorkbook allURLs, XSSFWorkbook allPTags, XSSFSheet urlSheet, XSSFSheet pSheet, int rowid1, int rowid2, int count)

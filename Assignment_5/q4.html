@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4</title>
+</head>
+<body>
+    <form>
+        <label>Enter half width: </label>
+        <input type="text" id="width" name="width">
+        <label>Enter no of rows: </label>
+        <input type="text" id="rows" name="rows">
+        <input type="submit" value="Submit" id="myButton">
+    </form>
+
+</body>
+
+<script>
+
+    document.getElementById("myButton").addEventListener("click", function()
+    {
+        //Reads number of rows to be printed
+        var width = document.getElementById("width").value;
+        var rows = document.getElementById("rows").value;
+
+        if(width%2==0)
+        {
+            width=width-1;
+        }
+        var i;
+        var j;
+        for(var row=0;row<rows;row++)
+        {
+            for(i=0;i<width;i++)
+            {
+                //Prints trailing spaces
+                for(j=width-i; j>=0; j--)
+                {
+                    document.write("_");
+                }
+
+                //Prints the pyramid pattern
+                for(j=0; j<(2*i+1); j++)
+                {
+                    if(row==0 && j==0 && i==0)
+                    {
+                        document.write("*");
+                    }
+                    else
+                    {
+                        document.write("0");
+                    }
+                }
+                document.write("<br>");
+            }
+        }
+        for(j=0;j<10;j++)
+        {
+            for(i=0;i<width;i++)
+            {
+                document.write("_");
+            }
+            for(i=0;i<=2;i++)
+            {
+                document.write("0");
+            }
+            document.write("<br>");
+        }
+
+    }, false);
+</script>
+</html>
